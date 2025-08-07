@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Toy Box</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background: #f0f0f0;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+    }
+
+    select {
+      margin-top: 5px;
+      padding: 5px;
+    }
+
+    .container {
+      display: flex;
+      background: white;
+      border: 2px dashed #aaa;
+      padding: 20px;
+      height: 300px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .container img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎯 Flexbox Toy Box Demo</h1>
+  <p>Change the settings below to see how layout changes in real-time.</p>
+
+  <div class="controls">
+    <label>
+      Flex Direction
+      <select id="flexDirection">
+        <option value="row">row (↔️)</option>
+        <option value="row-reverse">row-reverse (↔️ backwards)</option>
+        <option value="column">column (↕️)</option>
+        <option value="column-reverse">column-reverse (↕️ backwards)</option>
+      </select>
+    </label>
+
+    <label>
+      Justify Content
+      <select id="justifyContent">
+        <option value="flex-start">flex-start</option>
+        <option value="center">center</option>
+        <option value="flex-end">flex-end</option>
+        <option value="space-between">space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="space-evenly">space-evenly</option>
+      </select>
+    </label>
+
+    <label>
+      Align Items
+      <select id="alignItems">
+        <option value="flex-start">flex-start</option>
+        <option value="center">center</option>
+        <option value="flex-end">flex-end</option>
+        <option value="stretch">stretch</option>
+        <option value="baseline">baseline</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="container" id="flexContainer">
+    <img src="https://placekitten.com/80/80" alt="Kitten 1">
+    <img src="https://placebear.com/80/80" alt="Bear 1">
+    <img src="https://placekitten.com/81/80" alt="Kitten 2">
+    <img src="https://placebear.com/82/80" alt="Bear 2">
+    <img src="/Dash/discord.png" alt="discord">
+  </div>
+
+  <script>
+    const container = document.getElementById('flexContainer');
+    const flexDirection = document.getElementById('flexDirection');
+    const justifyContent = document.getElementById('justifyContent');
+    const alignItems = document.getElementById('alignItems');
+
+    function updateLayout() {
+      container.style.flexDirection = flexDirection.value;
+      container.style.justifyContent = justifyContent.value;
+      container.style.alignItems = alignItems.value;
+    }
+
+    flexDirection.addEventListener('change', updateLayout);
+    justifyContent.addEventListener('change', updateLayout);
+    alignItems.addEventListener('change', updateLayout);
+  </script>
+
+</body>
+</html>

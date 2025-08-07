@@ -1,0 +1,55 @@
+.flex-container {
+    border: 24px lightgrey;
+    max-height: 500px;
+    padding: 24px;
+    display:flex;
+   justify-content: space-between;
+    align-items: center;
+    
+    
+    
+    
+    
+    
+}
+.column { 
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+    
+.column2 { 
+    display: flex;
+    justify-content:default;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    
+    
+    
+    
+    
+    
+}
+
+}
+
+.title{
+    border: 2px solid lightgrey;
+    width: 100px;
+    margin-bottom: 24px;
+}
+
+.box {  
+   border: 8px solid lightgray;
+   width: 70px;
+    height: 100px;
+    
+
+
+}
+
+
+ 
