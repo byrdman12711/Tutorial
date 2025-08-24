@@ -4,98 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./tutorial.css">
 </head>
 <body>
 <section>
-    <nav>
-          <img src="./Assets/FES.svg" alt="">
-          <ul>
-            <li><a href="#about">About</a> </li>
-            <li><a href="#discord">Discord</a> </li>
-            <li><a href="#contact">Contact</a> </li>
-          </ul>
-    </nav>
+    
+     <nav>
+            <img src="./Assets/FES.svg" class="logo">
+            <ul>
+                <li><a href="#about">About</a> </li>
+                <li><a href="#discord">Discord</a> </li>
+                <li><a href="#contact">Contact</a> </li>
+            </ul>
+        </nav>
     <header>
-        <div>
+        <div class="row">
+<div class="home__description">
+            <div>
                 <h1>Best place to learn frontend</h1>
-                <p>Go from absolute beginer to pro with a simplified process.</p>
-                <button>Start now</button>
+                <p class="subheader">Go from absolute beginer to pro with a simplified process.</p>
+                <button class="home__description--button" start now></button>
+            </div>
+            <figure>
+                <img src="./Assets/laptop.png" alt="homepage image">  
+            </figure>
         </div>
-        <figure>
-            <img src="./Assets/laptop.png" alt="homepage image">  
-        </figure>
     </header>
 </section>
+
+
 <main>
-
-
     <section id="about">
 
         <h2>About</h2>
-        <div class="section__description">
-            <div class="section__description--wrapper">
-                <p class="section__description--paragraph">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptatem ex! Deleniti eius voluptatum odio repudiandae iste ab numquam adipisci.</p>
-                </p>
-                    <p class="section__description--paragraph">
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptatem ex! Deleniti eius voluptatum odio repudiandae iste ab numquam adipisci.</p>
+        <div class="row">
 
-                </p>
-            </div>
-            <img src="./Assets/about.jpg" alt="">
-            
-            <figure class="about__image--wrapper">
-                        </figure>
-                    </div>
-                </section>
-                <section id="discord">
-                <h2>Discord</h2>
-                <div class="section__description">
-                    <figure>
-                        <img src="../Dash/discord.png" alt="">
-                    </figure>
-                    <div class="section__description--wrapper">
+            <div class="section__description">
+                <div class="section__description--wrapper">
                     <p class="section__description--paragraph">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptatem ex! Deleniti eius voluptatum odio repudiandae iste ab numquam adipisci.</p>
                     </p>
-                    
                     <p class="section__description--paragraph">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptatem ex! Deleniti eius voluptatum odio repudiandae iste ab numquam adipisci.</p>
                         
-    </p>
-    </div>
-    </div>
-</section>
-<section id="Contact">
+                    </p>
+                </div>
+                <figure class="about__image--wrapper">
+                    <img src="./Assets/about.jpg" alt="">
+                </figure>
+            </div>
+            
+                
+                </section>
+                <section id="discord">
+                <h2>Discord</h2>
+                <div class="row">
+
+                    <div class="section__description">
+                        <figure>
+                            <img src="../Dash/discord.png" alt="">
+                        </figure>
+                        <div class="section__description--wrapper">
+                            <p class="section__description--paragraph">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptatem ex! Deleniti eius voluptatum odio repudiandae iste ab numquam adipisci.</p>
+                            </p>
+                            
+                            <p class="section__description--paragraph">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptatem ex! Deleniti eius voluptatum odio repudiandae iste ab numquam adipisci.</p>
+                                
+                            </p>
+                        </div>
+                            
+                        </div>
+                    </section>
+                    <section id="contact">
     <h2>Contact</h2>
     <form action="email" method="post">
         <span>Email</span>
-        <input type="text" placeholder="fourbranchesoneleaf@gmail.com">
+        <input type="email" placeholder="fourbranchesoneleaf@gmail.com">
         <span>message</span>
         <textarea type="text" placeholder="Lets get started coding together"></textarea>
-        <button>contact us</button>
     </form>
+    <div>
+        <button>contact us</button>
+    </div>
+
 </section>
 </main>
-    <footer>
-        <img src="./Assets/FES.svg" alt="">
-        <div>
-            <a href="about">About</a>
-            <a href="discord">Discord</a>
-            <a href="contact">Contact</a>
-            <a href="courses">courses</a>
-        </div>
+
+<footer>
     <div>
-        
-        <p>Copyright Frontend Simplifed
-        </p>
+
+        <img class="footer__logo" src="./Assets/FES.svg" alt=>
     </div>
-</footer>
-</section>
+    <div class="footer__link" style="margin-bottom: 32px">
+        <a class="footer__link" href="about" >About</a>
+        <a class="footer__link" href="discord" >Discord</a>
+        <a class="footer__link" href="contact" >Contact</a>
+        <a class="footer__link" href="course" >Contact</a>
+        
+        
+    </div>
+    <div class="footer__discription">
+    <p>Copyright Frontend Simplifed</p>
+    </div>
+    </footer>
 </body>
 </html>
-
+</div> 
 
     
     
