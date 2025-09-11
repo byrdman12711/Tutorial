@@ -7,6 +7,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: #242424;
     text-align: center;
@@ -22,6 +26,44 @@ p{
     line-height: 1.5;
     font-size: 16px;
 }
+
+.a {
+    text-decoration: none;
+    position: relative;
+    transition: opacity 300ms ease;
+}
+    
+.i:hover{
+    opacity: 0.7;
+}
+
+
+.link_hover-effect:after { 
+    
+    content:"";
+    position: absolute;
+    height: 3px;
+    bottom: -3px;
+    width: 0;
+    right: 0;
+    transition: all 300ms ease;
+
+
+}
+
+.link_hover-effect--white::after {
+    background-color: white;
+}
+
+.link_hover-effect--black::after {
+    background-color: black;
+}
+
+.link_hover-effect:hover::after {
+    width: 100%;
+    left: 0;
+}
+
 
 li{
     list-style: none;
@@ -39,14 +81,17 @@ li{
     padding: 0px 0px 200px;
     
 
-
 }
+
+
 
 
 .row {
     width: 100%;
     max-width:800px;
     margin: 0 auto;
+    padding: 0 24px;
+
     
 
     
@@ -55,6 +100,7 @@ li{
 
 .text--purple{
     color:#2cd8e1
+
 }
 
 section:nth-child(even) {
@@ -62,7 +108,8 @@ section:nth-child(even) {
 }
 
 .section_title {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 section:nth-child(even) {
@@ -74,13 +121,27 @@ section:nth-child(even) {
 nav{
     height: 100px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 2000px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 12px;
     
 }
+
+.nav_link--list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    
+}
+
+
+
 
 .nav_link--anchor {
     display: flex;
@@ -88,23 +149,29 @@ nav{
 
 .nav_link--anchor {
     margin: 0 12px;
-    color: #242424;
+    color:#3becec;
     text-decoration: none;
     font-weight: 700;
+    position: relative;
+    
+
 
 }
 
-.nav_link--anchor-primary {
+.nav_link--anchor--primary {
     background: color rgb(161, 62, 62);
     padding: 8px 20px;
     border-radius: 50px;
     color: #3becec;;
     transition: all 300ms ease;
 
+    
+
 }
 
-.nav_link--anchor-primary:hover {
+.nav_link--anchor--primary:hover {
      background-color: #5d3eff;
+    
 }
 
 .personal_logo {
@@ -121,7 +188,7 @@ nav{
     display: flex;
     flex-direction: column;
     overflow:hidden ;
-box-shadow: 0 2px 24px; 
+box-shadow: 0 2px px; 
 margin-bottom: 26px; 
 
 }
@@ -141,6 +208,8 @@ margin-bottom: 26px;
     text-align:center;
     
 
+    
+
 
     
 }
@@ -154,7 +223,23 @@ margin-bottom: 26px;
     overflow: hidden;
     box-shadow: 10px 8px 16px;
     margin-bottom: 24px;
+    animation: animate-profile--picture 800ms 200ms backwards;
 
+}
+
+@keyframes animate-profile--picture{
+    0%{
+        transform:scale(0)
+        
+    }
+  
+    80%{
+        transform: scale(1.1);
+    
+} 
+100%{
+    transform: scale(1);
+}
 }
 
 
@@ -172,29 +257,57 @@ padding-top: 4px;
 
 .about-me_info--title {
     margin-bottom: 16px;
+    animation: fade-up 650ms 400ms backwards;
 }
 
 
-.about-me_info--para {
+.about-me__info--para {
     font-size: 20px;
     margin-bottom: 28px;
-
+    animation: fade-up 650ms 400ms backwards;
 }
+
+
+
 
 .about_me-link-link {
     flex-direction: row;
     align-items: start;
+    text-decoration: none;
+    animation: fade-up 650ms 600ms backwards 1s;
+    
+    
+
+}
+
 
     
  
 
-}
+
 
 .about-me_link {
     font-size: 45px;
     color: #242424;
     padding: 0 16px;
     text-decoration: none;
+    animation: fade-up 650ms 800ms backwards;
+}
+
+
+
+
+
+
+@keyframes fade-up{
+0% {
+    opacity: 0;
+    transform: translateY(40px) ;
+}
+100%{
+    opacity: 1;
+    transform: translateY(0);
+}
 
 }
 
@@ -205,19 +318,50 @@ padding-top: 4px;
     flex-direction: row;
     align-content: center;
     justify-content: space-between;
+   
+    
 
     
     
 }
 .about-me_img {
-width: 40%;
+width: 55%;
+animation: fade-in 1200ms 800ms backwards;
 }
 .about-me_img2 {
     width: 50%;
+    animation: fade-in 1200ms 800ms backwards;
    
 }
 
+@keyframes fade-in {
+    0%{
+        opacity: 0;
 
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+
+.wave {
+    display: inline-block;
+    animation: animate-wave 500ms infinite ease;
+}
+
+@keyframes animate-wave {
+    0%{
+        transform: rotate(0);
+ 
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
 
 /* language*/
 
@@ -259,7 +403,10 @@ width: 40%;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: center;
 }
+    
+
 
 .language_name {
     position: absolute;
@@ -282,9 +429,21 @@ width: 40%;
  /* Projects */
 
 
+ .project {
+    padding-bottom: 135px;
+    
+ }
+
+ .project:last-child {
+    margin-bottom: 40px;
+    
+ }
+
  .project_img {
     width: 100%;
     transition: all 500ms ease;
+    
+    
  }
 
  .project_wrapper {
@@ -293,9 +452,10 @@ width: 40%;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+    
  }
  .project_wrapper:before {
-    content:"";
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -305,17 +465,217 @@ width: 40%;
     opacity: 0;
     transition: opacity 450ms ease;
     z-index: 2;
+    
  }
 
   .project:hover .project_wrapper::before {
     opacity: 0.9;
+    
  }
 
  .project:hover .project_img {
     transform: scaleX(1.07);
     filter: blur(5px);
+    
 
  }
-.project_list {
+
+ .project:hover .project_description{
+    opacity: 1;
+    transform: translateY(-50%);
+    
+ }
+
+ .project_list {
     padding: 40px;
+    
 }
+
+.project_description {
+    position: absolute;
+    top: 50%;
+    transform: translateY(100%);
+    left: 90px;
+    max-width: 550px;
+    z-index: 3;
+    opacity: 0;
+    transition: transform 450ms, opacity 300ms;
+    
+}
+.project_description--para {
+    margin: 16px 0;
+    font-size: 16px;
+    padding: 30px;
+    
+
+}
+
+.project_description--link {
+    font-size: 20px;
+    margin: right 16px;
+    text-decoration: none; 
+}
+
+.project_description--title,
+ .project_description--sub-title,
+ .project_description--para,
+ .project_description--link {
+     text-align: left;
+     color:#f8f8f8;
+    
+}
+
+/* footer*/
+
+.footer {
+    background-color: #242424;
+}
+
+
+
+.footer_social--list {
+
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 750px;
+    text-decoration: none;
+    
+}
+
+.row.footer_row{
+    padding: 8% 0;
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+    flex-direction: column;
+     
+    
+    
+
+}
+
+.footer_Social-list{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+
+.footer_logo--image{
+    
+   
+
+    
+}
+
+.footer_copyright {
+    display: flex;
+    padding: 8% 0;
+    justify-content: center;
+
+    
+    
+
+}
+
+.footer_Social-link
+.footer_copyright
+.footer_logo--popper {
+color: #f8f8f8;
+
+
+}
+
+
+.footer_logo--popper {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    font-weight: 700;
+    transition: all 300ms;
+
+
+}
+
+.footer_anchor{
+    position:  relative;
+    margin-bottom: 20px;
+}
+
+.footer_anchor:hover .footer_logo--popper {
+    transform: translate(60px);
+    opacity: 1;
+
+}
+
+/* Small phones, tablets, large smartphones */
+
+@media (max-width:768px) {
+    nav {
+        height: 68px;
+    }
+    
+    h1{
+        font: size 28px; ;
+    }
+
+    .about-me_info--para{
+        font-size: 28px;
+    }
+ .language {
+    width: calc(100% / 3);
+ }
+
+ .project_description--para {
+    font-size: 14px;
+ }
+
+ .project_description {
+    left: 30 px;
+    padding-right: 30px;
+ }
+
+}
+
+
+/* Small phones*/
+@media (max-width: 480px) {
+    .nav_link:not(:last-child) {
+        display: none;
+    }
+
+    .project_description{
+        padding: 0;
+        left: 0;
+        width: 100%;
+    }
+
+
+    .project_description--para {
+    display: none;
+}
+
+.project_description--link {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.project_description--title{
+    font-size: 32px;
+    line-height: 1;
+    text-align: center;
+}
+
+.project_description--sub-title{
+    text-align: center;
+    margin: 12px 0;
+
+}
+
+    }
+    
