@@ -32,6 +32,7 @@ button{
   background-color:  #05c7cf;
   color:white;
   border: none;
+  border-radius: 24px;
   padding: 8px 16px;
   font-size: 24px;
   cursor: pointer;
@@ -241,6 +242,7 @@ margin-bottom: 16px;
   
   .home__description--button {
        max-width: 240px;
+    
      }
 ul{ display: none;
 
