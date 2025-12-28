@@ -564,12 +564,7 @@ animation: fade-in 1200ms 800ms backwards;
 }
 
 
-.footer_logo--image{
-    
-   
 
-    
-}
 
 .footer_copyright {
     display: flex;
@@ -619,7 +614,7 @@ color: #f8f8f8;
     }
     
     h1{
-        font: size 28px; ;
+        font: size 28px; 
     }
 
     .about-me_info--para{

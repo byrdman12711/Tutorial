@@ -211,7 +211,7 @@ margin-bottom: 16px;
 }
 
 .footer__link {
-
+width: auto;
 }
 
 @media (max-width: 728px) {
